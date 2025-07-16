@@ -53,7 +53,7 @@ public class GoogleTest {
 
             String url = driver.getCurrentUrl();
             System.out.println("🔗 Current URL: " + url);
-            assert url.contains("localhost");
+            assert url.contains("jalvitaran");
 
             System.out.println("✅ Test Passed");
 

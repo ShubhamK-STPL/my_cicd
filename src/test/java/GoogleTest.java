@@ -37,8 +37,8 @@ public class GoogleTest {
     public void testOpenAndClick() {
         try {
 
-            //driver.get("https://demo-jalvitaran.shauryatechnosoft.com/home");
-            driver.get("http://localhost:3000");
+            driver.get("https://demo-jalvitaran.shauryatechnosoft.com/home");
+            // driver.get("http://localhost:3000");
             System.out.println("🌐 Opened URL");
 
             boolean loginVisible = driver.findElement(By.xpath("//*[contains(text(),'Corporation Login')]")).isDisplayed();

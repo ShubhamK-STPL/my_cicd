@@ -1,4 +1,4 @@
-name: Run Selenium Tests
+name: run-selenium-tests.yml
 
 on:
   repository_dispatch:
@@ -19,24 +19,15 @@ jobs:
           java-version: '17'
 
       - name: 🧪 Run Selenium Tests
-        run: |
-          mkdir -p results
-          if mvn clean test; then
-            echo "SUCCESS" > results/status.txt
-          else
-            echo "FAILURE" > results/status.txt
-          fi
+        run: mvn clean test
 
-      - name: 📦 Upload Test Reports
+      - name: 📝 Save Test Result
         if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: selenium-test-reports
-          path: target/surefire-reports/
+        run: echo "status=${{ job.status }}" > selenium-test-status.txt
 
-      - name: 📤 Upload Status File
+      - name: 📦 Upload Test Status
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: selenium-test-status
-          path: results/status.txt
+          path: selenium-test-status.txt

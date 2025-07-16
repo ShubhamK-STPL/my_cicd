@@ -1,5 +1,3 @@
-# selenium-cicd/.github/workflows/run-selenium-tests.yml
-
 name: Run Selenium Tests
 
 on:
@@ -36,7 +34,7 @@ jobs:
           name: selenium-test-reports
           path: target/surefire-reports/
 
-      - name: 📦 Upload Status File
+      - name: 📤 Upload Status File
         if: always()
         uses: actions/upload-artifact@v3
         with:

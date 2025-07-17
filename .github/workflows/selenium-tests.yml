@@ -17,6 +17,9 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '22'
+          
+      - name: 🔍 Verify Java Version
+        run: java -version
 
       - name: 🧪 Run Selenium Tests
         run: mvn clean test -DsuiteXmlFile=test1.xml

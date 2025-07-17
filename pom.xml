@@ -20,12 +20,6 @@
             <version>4.19.0</version>
         </dependency>
 
-        <!-- JUnit 5 -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.9.3</version>
-        </dependency>
 
         <!-- WebDriver Manager (for automatic driver downloads) -->
         <dependency>
@@ -69,17 +63,17 @@
         </plugin>
 
         <!-- Surefire Plugin -->
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.5.3</version>
-            <configuration>
-                <includes>
-                    <include>**/*Test.java</include>
-                </includes>
-                <useModulePath>false</useModulePath>
-            </configuration>
-        </plugin>
+                 <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-surefire-plugin</artifactId>
+           <version>3.2.5</version> <!-- or latest stable -->
+           <configuration>
+             <suiteXmlFiles>
+               <suiteXmlFile>test1.xml</suiteXmlFile>
+             </suiteXmlFiles>
+           </configuration>
+         </plugin>
+
     </plugins>
 </build>
 

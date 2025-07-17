@@ -19,7 +19,7 @@ jobs:
           java-version: '17'
 
       - name: 🧪 Run Selenium Tests
-        run: mvn clean test
+        run: mvn clean test -DsuiteXmlFile=test1.xml
 
       - name: 📝 Save Test Result
         if: always()

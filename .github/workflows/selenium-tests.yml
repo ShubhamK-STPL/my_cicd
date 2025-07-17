@@ -27,7 +27,7 @@ jobs:
 
       - name: 📦 Upload Test Status
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: selenium-test-status
           path: selenium-test-status.txt

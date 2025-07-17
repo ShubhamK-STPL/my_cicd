@@ -43,5 +43,5 @@ jobs:
           restore-keys: ${{ runner.os }}-maven-
 
       - name: Run TestNG Tests
-        run: mvn test -DsuiteXmlFile=test1.xml # xml file name
+        run: mvn test -DsuiteXmlFile=test1.xml # add xml file name
 

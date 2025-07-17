@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '22'
 
       - name: 🧪 Run Selenium Tests
         run: mvn clean test -DsuiteXmlFile=test1.xml

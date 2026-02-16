@@ -37,7 +37,8 @@ public class GoogleTest {
     @Test
     public void testOpenAndClick() {
         try {
-            driver.get("https://demo-jalvitaran.shauryatechnosoft.com/home");
+            // driver.get("https://demo-jalvitaran.shauryatechnosoft.com/home");
+             driver.get("https://jalvitaran.erpguru.in/home");
             // driver.get("http://localhost:3000");
             System.out.println("🌐 Opened URL");
 
